@@ -10,13 +10,13 @@ Summary:        Apache Search Server
 Source:         solr-%{version}.tgz
 Source1:        solr.init.in
 Source2:        solr.sysconfig.in
-Source3:        mysql-connector-java-5.1.26-bin.jar
+Source3:        mysql-connector-java-5.1.32-bin.jar
 URL:            http://lucene.apache.org/solr/
 Group:          Development/Tools/Building
 License:        Apache License, Version 2.0
 BuildRoot:      %{_tmppath}/build-%{name}-%{version}
 Requires:       /usr/sbin/groupadd /usr/sbin/useradd
-BuildArch:      noarch
+BuildArch:      x86_64
 
 %description
 Solr is a standalone enterprise search server with a REST-like API.
@@ -74,6 +74,10 @@ exit 0
 %config(noreplace) /etc/sysconfig/solr
 
 %changelog
+* Wed Sep 10 2014 borys.borysenko@gmail.com
+- Set architecure to x86_64
+- Upadet JDBC driver version
+
 * Wed Sep 11 2013 bwong114@gmail.com
 - Added JDBC driver
 
